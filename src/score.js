@@ -2,7 +2,7 @@
 
 var Backbone = require('backbone'),
   Joi = require('joi'),
-  ResultEnum = require('./Result');
+  ResultEnum = require('./result');
 
 var Score = Backbone.Model.extend({
   defaults: {
