@@ -1,0 +1,23 @@
+{
+  "name": "fcstats-models",
+  "version": "1.0.0",
+  "description": "fcstats models module",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "mocha -R spec",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
+  },
+  "author": "Ovidiu Bute <ovidiu.bute@gmail.com> (http://ovidiubute.com)",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.3.2",
+    "joi": "^8.0.5",
+    "moment": "^2.12.0",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5"
+  }
+}
