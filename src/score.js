@@ -1,7 +1,6 @@
 "use strict";
 
 var Backbone = require('backbone'),
-  Joi = require('joi'),
   ResultEnum = require('./result');
 
 var Score = Backbone.Model.extend({
@@ -34,22 +33,6 @@ var Score = Backbone.Model.extend({
 
     this.bind("change:home", this.calculateResult);
     this.bind("change:away", this.calculateResult);
-  },
-
-  validate: function (attrs, options) {
-    return Joi.validate(attrs, Score.getSchema(), function (err, value) {
-      if (err) {
-        return err;
-      }
-    });
-  }
-}, {
-  getSchema: function () {
-    return Joi.object().keys({
-      home: Joi.number().integer().min(0).max(99).required(),
-      away: Joi.number().integer().min(0).max(99).required(),
-      result: Joi.number().integer().min(0).max(2).required()
-    });
   }
 });
 
